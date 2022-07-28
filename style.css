@@ -4,11 +4,11 @@ body {
   line-height: 1;
 }
 
-textarea{
+article {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: #000000 !important;
   border-left: 1px solid black;
   padding: 10px;
 }
@@ -21,19 +21,23 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
+.description {
   white-space: pre-wrap;
 }
 
-.time-block{
-  text-align: center;
+.time-block {
   border-radius: 15px;
+}
+
+.time-block:focus {
+  outline: none;
 }
 
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
+  position: relative;
 }
 
 .hour {
@@ -61,11 +65,29 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color: #06aed5;
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
-  transition: all .3s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  color: #000;
+}
+
+.saveBtn:focus {
+  outline: none;
+}
+
+.guide {
+  color: #000000;
+}
+
+.row {
+  margin-top: 28px;
+}
+
+.hour p {
+  text-align: center;
+  padding-top: 10px;
 }
