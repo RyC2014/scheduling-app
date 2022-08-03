@@ -43,7 +43,7 @@ var articleArr = [
   { text1Pm: '.hour1' },
   { text2Pm: '.hour2' },
   { text3Pm: '.hour3' },
-  { text4Pm: 'hour4' },
+  { text4Pm: '.hour4' },
   { text5Pm: '.hour5' },
 ];
 
