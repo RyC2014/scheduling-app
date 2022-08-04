@@ -60,3 +60,5 @@ function setColor() {
     }
   }
 
+// dateDisplay();
+setColor();
