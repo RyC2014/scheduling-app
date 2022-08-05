@@ -34,6 +34,15 @@ hour4Pm = parseInt(hour4Pm[0]) + 12;
 let hour5Pm = document.querySelector('.hour5').textContent;
 hour5Pm = parseInt(hour5Pm[0]) + 12;
 
+// display current day at top of the browser
+
+
+
+  $("#currentDay").text(moment().format('LLLL'));
+    
+
+
+
 var hours = [hour9Am, hour10Am, hour11Am, hour12Pm, hour1Pm, hour2Pm, hour3Pm, hour4Pm, hour5Pm];
 var articleArr = [
   { text9am: '.hour9' },
