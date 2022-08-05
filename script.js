@@ -4,6 +4,10 @@ let timeBlockEl = document.querySelectorAll('.time-block');
 let currentTime = moment().format('H');
 currentTime = parseInt(currentTime);
 
+$(document).ready(function () {
+  renderText();
+});
+
 
 // changes the hour time slot into current hour
 
@@ -71,59 +75,115 @@ function setColor() {
 
   // when "save" button is clicked, it saves to local storage
   
-  $('.btn9').on('click', function () {
-    var taskContent = $('.hr9').val();
-    localStorage.setItem('9:00 AM', taskContent);
-  });
-  $('.hr9').val(localStorage.getItem('9:00 AM'));
+  // $('.btn9').on('click', function () {
+  //   var taskContent = $('.hour9').val();
+  //   localStorage.setItem('9:00 AM', taskContent);
+  // });
+  // $('.hour9').val(localStorage.getItem('9:00 AM'));
   
-  $('.btn10').on('click', function () {
-    var taskContent = $('.hr10').val();
-    localStorage.setItem('10:00 AM', taskContent);
-  });
-  $('.hr10').val(localStorage.getItem('10:00 AM'));
+  // $('.btn10').on('click', function () {
+  //   var taskContent = $('.hr10').val();
+  //   localStorage.setItem('10:00 AM', taskContent);
+  // });
+  // $('.hr10').val(localStorage.getItem('10:00 AM'));
   
-  $('.btn11').on('click', function () {
-    var taskContent = $('.hr11').val();
-    localStorage.setItem('11:00', taskContent);
-  });
-  $('.hr11').val(localStorage.getItem('11:00 AM'));
+  // $('.btn11').on('click', function () {
+  //   var taskContent = $('.hr11').val();
+  //   localStorage.setItem('11:00 AM', taskContent);
+  // });
+  // $('.hr11').val(localStorage.getItem('11:00 AM'));
   
-  $('.btn12').on('click', function () {
-    var taskContent = $('.hr12 PM').val();
-    localStorage.setItem('12:00 PM', taskContent);
-  });
-  $('.hr12').val(localStorage.getItem('12:00 PM'));
+  // $('.btn12').on('click', function () {
+  //   var taskContent = $('.hr12 PM').val();
+  //   localStorage.setItem('12:00 PM', taskContent);
+  // });
+  // $('.hr12').val(localStorage.getItem('12:00 PM'));
   
-  $('.btn1').on('click', function () {
-    var taskContent = $('.hr1').val();
-    localStorage.setItem('1:00 PM', taskContent);
-  });
-  $('.hr1').val(localStorage.getItem('1:00 PM'));
+  // $('.btn1').on('click', function () {
+  //   var taskContent = $('.hr1').val();
+  //   localStorage.setItem('1:00 PM', taskContent);
+  // });
+  // $('.hr1').val(localStorage.getItem('1:00 PM'));
   
-  $('.btn2').on('click', function () {
-    var taskContent = $('.hr2').val();
-    localStorage.setItem('2:00 PM', taskContent);
-  });
-  $('.hr2').val(localStorage.getItem('2:00 PM'));
+  // $('.btn2').on('click', function () {
+  //   var taskContent = $('.hr2').val();
+  //   localStorage.setItem('2:00 PM', taskContent);
+  // });
+  // $('.hr2').val(localStorage.getItem('2:00 PM'));
   
-  $('.btn3').on('click', function () {
-    var taskContent = $('.hr3').val();
-    localStorage.setItem('3:00 PM', taskContent);
-  });
-  $('.hr3').val(localStorage.getItem('3:00 PM'));
+  // $('.btn3').on('click', function () {
+  //   var taskContent = $('.hr3').val();
+  //   localStorage.setItem('3:00 PM', taskContent);
+  // });
+  // $('.hr3').val(localStorage.getItem('3:00 PM'));
   
-  $('.btn4').on('click', function () {
-    var taskContent = $('.hr4').val();
-    localStorage.setItem('4:00 PM', taskContent);
-  });
-  $('.hr4').val(localStorage.getItem('4:00 PM'));
+  // $('.btn4').on('click', function () {
+  //   var taskContent = $('.hr4').val();
+  //   localStorage.setItem('4:00 PM', taskContent);
+  // });
+  // $('.hr4').val(localStorage.getItem('4:00 PM'));
   
-  $('.btn5').on('click', function () {
-    var taskContent = $('.hr5').val();
-    localStorage.setItem('5:00 PM', taskContent);
+  // $('.btn5').on('click', function () {
+  //   var taskContent = $('.hr5').val();
+  //   localStorage.setItem('5:00 PM', taskContent);
+  // });
+  // $('.hr5').val(localStorage.getItem('5:00 PM'));
+  let eventText;
+  let eventTime;
+  
+  $(".saveBtn").click(function() {
+    console.log('test')
+      eventText = $(this).siblings(".block").val();
+      eventTime = $(this).siblings(".hour").text();
+      window.localStorage.setItem(eventTime, JSON.stringify(eventText));
+  
+      renderText ();
+  
   });
-  $('.hr5').val(localStorage.getItem('5:00 PM'));
 
-// dateDisplay();
+
+  function renderText () {
+    
+
+    let saveText9 = JSON.parse(localStorage.getItem("9:00AM"));
+    $("#9").val("");
+    $("#9").val(saveText9);
+
+    let saveText10 = JSON.parse(localStorage.getItem("10:00AM"));
+    $("#10").val("");
+    $("#10").val(saveText10);
+
+    let saveText11 = JSON.parse(localStorage.getItem("11:00AM"));
+    $("#11").val("");
+    $("#11").val(saveText11);
+
+    let saveText12 = JSON.parse(localStorage.getItem("12:00PM"));
+    $("#12").val("");
+    $("#12").val(saveText12);
+
+    let saveText1 = JSON.parse(localStorage.getItem("1:00PM"));
+    $("#13").val("");
+    $("#13").val(saveText1);
+
+    let saveText2 = JSON.parse(localStorage.getItem("2:00PM"));
+    $("#14").val("");
+    $("#14").val(saveText2);
+
+    let saveText3 = JSON.parse(localStorage.getItem("3:00PM"));
+    $("#15").val("");
+    $("#15").val(saveText3);
+
+    let saveText4 = JSON.parse(localStorage.getItem("4:00PM"));
+    $("#16").val("");
+    $("#16").val(saveText4);
+
+    let saveText5 = JSON.parse(localStorage.getItem("5:00PM"));
+    $("#17").val("");
+    $("#17").val(saveText5);
+
+  
+
+};
+
+
 setColor();
