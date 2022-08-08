@@ -133,62 +133,56 @@ function setColor() {
   
   $(".saveBtn").click(function() {
     console.log('test')
-      eventText = $(this).siblings(".block").val();
-      eventTime = $(this).siblings(".hour").text();
+    eventText = $(this).siblings('.time-block').val();
+      eventTime = $(this).siblings(".hour").text().trim();
       window.localStorage.setItem(eventTime, JSON.stringify(eventText));
   
       renderText ();
-      saveScreen ();
+      
   
   });
 
-  function saveScreen() {
 
-    let saveScreen9 = JSON.parse(localStorage.setItem("9:00AM", eventText));
-    $("#9").val("");
-    $("#9").val(saveScreen9);
-
-  }
 
 
   function renderText () {
     
 
-    let saveText9 = JSON.parse(localStorage.getItem("9:00AM"));
-    $("#9").val("");
-    $("#9").val(saveText9);
+    let saveText9 = localStorage.getItem("9:00AM");
+    
+    $('.hr9').val(saveText9);
 
-    let saveText10 = JSON.parse(localStorage.getItem("10:00AM"));
-    $("#10").val("");
-    $("#10").val(saveText10);
+    let saveText10 = localStorage.getItem("10:00AM");
+    
+    $('.hr10').val(saveText10);
 
-    let saveText11 = JSON.parse(localStorage.getItem("11:00AM"));
-    $("#11").val("");
-    $("#11").val(saveText11);
+    let saveText11 = localStorage.getItem("11:00AM");
+    
+    $('.hr11').val(saveText11);
 
-    let saveText12 = JSON.parse(localStorage.getItem("12:00PM"));
-    $("#12").val("");
-    $("#12").val(saveText12);
+    let saveText12 = localStorage.getItem("12:00PM");
+    
+    $('.hr12').val(saveText12);
 
-    let saveText1 = JSON.parse(localStorage.getItem("1:00PM"));
-    $("#13").val("");
-    $("#13").val(saveText1);
+    let saveText1 = localStorage.getItem("1:00PM");
+    
+    $('.hr1').val(saveText1);
 
-    let saveText2 = JSON.parse(localStorage.getItem("2:00PM"));
-    $("#14").val("");
-    $("#14").val(saveText2);
+    let saveText2 = localStorage.getItem("2:00PM");
+    
+    $('.hr2').val(saveText2);
 
-    let saveText3 = JSON.parse(localStorage.getItem("3:00PM"));
-    $("#15").val("");
-    $("#15").val(saveText3);
+    let saveText3 = localStorage.getItem("3:00PM");
+    
+    $('.hr3').val(saveText3);
 
-    let saveText4 = JSON.parse(localStorage.getItem("4:00PM"));
-    $("#16").val("");
-    $("#16").val(saveText4);
+    let saveText4 = localStorage.getItem("4:00PM");
+    
+    $('.hr4').val(saveText4);
 
-    let saveText5 = JSON.parse(localStorage.getItem("5:00PM"));
-    $("#17").val("");
-    $("#17").val(saveText5);
+    let saveText5 = localStorage.getItem("5:00PM");
+    
+    $('.hr5').val(saveText5);
 
   
 
