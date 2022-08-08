@@ -138,8 +138,17 @@ function setColor() {
       window.localStorage.setItem(eventTime, JSON.stringify(eventText));
   
       renderText ();
+      saveScreen ();
   
   });
+
+  function saveScreen() {
+
+    let saveScreen9 = JSON.parse(localStorage.setItem("9:00AM", eventText));
+    $("#9").val("");
+    $("#9").val(saveScreen9);
+
+  }
 
 
   function renderText () {
