@@ -73,61 +73,7 @@ function setColor() {
     }
   }
 
-  // when "save" button is clicked, it saves to local storage
-  
-  // $('.btn9').on('click', function () {
-  //   var taskContent = $('.hour9').val();
-  //   localStorage.setItem('9:00 AM', taskContent);
-  // });
-  // $('.hour9').val(localStorage.getItem('9:00 AM'));
-  
-  // $('.btn10').on('click', function () {
-  //   var taskContent = $('.hr10').val();
-  //   localStorage.setItem('10:00 AM', taskContent);
-  // });
-  // $('.hr10').val(localStorage.getItem('10:00 AM'));
-  
-  // $('.btn11').on('click', function () {
-  //   var taskContent = $('.hr11').val();
-  //   localStorage.setItem('11:00 AM', taskContent);
-  // });
-  // $('.hr11').val(localStorage.getItem('11:00 AM'));
-  
-  // $('.btn12').on('click', function () {
-  //   var taskContent = $('.hr12 PM').val();
-  //   localStorage.setItem('12:00 PM', taskContent);
-  // });
-  // $('.hr12').val(localStorage.getItem('12:00 PM'));
-  
-  // $('.btn1').on('click', function () {
-  //   var taskContent = $('.hr1').val();
-  //   localStorage.setItem('1:00 PM', taskContent);
-  // });
-  // $('.hr1').val(localStorage.getItem('1:00 PM'));
-  
-  // $('.btn2').on('click', function () {
-  //   var taskContent = $('.hr2').val();
-  //   localStorage.setItem('2:00 PM', taskContent);
-  // });
-  // $('.hr2').val(localStorage.getItem('2:00 PM'));
-  
-  // $('.btn3').on('click', function () {
-  //   var taskContent = $('.hr3').val();
-  //   localStorage.setItem('3:00 PM', taskContent);
-  // });
-  // $('.hr3').val(localStorage.getItem('3:00 PM'));
-  
-  // $('.btn4').on('click', function () {
-  //   var taskContent = $('.hr4').val();
-  //   localStorage.setItem('4:00 PM', taskContent);
-  // });
-  // $('.hr4').val(localStorage.getItem('4:00 PM'));
-  
-  // $('.btn5').on('click', function () {
-  //   var taskContent = $('.hr5').val();
-  //   localStorage.setItem('5:00 PM', taskContent);
-  // });
-  // $('.hr5').val(localStorage.getItem('5:00 PM'));
+
   let eventText;
   let eventTime;
   
