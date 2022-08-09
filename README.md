@@ -7,7 +7,7 @@ Here you will find a simple calendar application that allows a user to save even
 
 
 
-[Portfolio Website](https://ryc2014.github.io/clingler-site/)
+[Scheduling app](https://ryc2014.github.io/scheduling-app/)
 
 ![Screenshot one](/assets/images/Screen%20Shot%202022-08-09%20at%209.29.14%20AM.png "Screenshot one") 
 
